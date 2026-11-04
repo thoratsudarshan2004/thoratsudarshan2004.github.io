@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Two arms reaching for each other, red on black.
+       Drawn here rather than photographed; swap in your own picture by
+       saving it as assets/philosophy.jpg and pointing
+       .scroll-expand__media at it in css/style.css. -->
+  <defs>
+    <linearGradient id="flesh" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%"   stop-color="#e2493a"/>
+      <stop offset="22%"  stop-color="#c62a20"/>
+      <stop offset="55%"  stop-color="#9c1a13"/>
+      <stop offset="82%"  stop-color="#6d100b"/>
+      <stop offset="100%" stop-color="#480906"/>
+    </linearGradient>
+
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ff8f6b" stop-opacity="0.55"/>
+      <stop offset="38%"  stop-color="#ff6b45" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ff6b45" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="gap" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#ffd2b4" stop-opacity="0.42"/>
+      <stop offset="35%"  stop-color="#fc6b2f" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#fc6b2f" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="vig" cx="50%" cy="50%" r="60%">
+      <stop offset="50%"  stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.85"/>
+    </radialGradient>
+
+    <filter id="edge" x="-8%" y="-8%" width="116%" height="116%">
+      <feGaussianBlur stdDeviation="1.6"/>
+    </filter>
+
+    <!-- one arm: forearm, back of hand, four fingers and a thumb,
+         reaching to the right with the fingertip near x=950 -->
+    <g id="arm">
+      <path d="M -30 585 C 150 585, 340 558, 470 520
+               C 540 500, 596 486, 646 482
+               C 690 479, 724 488, 748 508
+               C 766 524, 768 546, 752 560
+               C 726 582, 676 590, 626 586
+               C 560 580, 420 596, 230 628
+               C 140 643, 40 656, -30 662 Z"/>
+      <path d="M 742 512 C 790 522, 850 544, 908 566
+               C 936 576, 948 582, 952 590
+               C 956 600, 946 608, 932 605
+               C 876 592, 812 568, 760 546 Z"/>
+      <path d="M 744 536 C 792 554, 846 580, 890 604
+               C 912 616, 918 628, 908 636
+               C 896 645, 880 640, 866 630
+               C 822 600, 778 574, 742 558 Z"/>
+      <path d="M 734 556 C 772 578, 812 606, 844 634
+               C 860 648, 860 660, 848 666
+               C 834 672, 822 664, 812 652
+               C 786 620, 752 592, 724 574 Z"/>
+      <path d="M 716 572 C 744 594, 772 620, 792 646
+               C 802 660, 798 672, 786 674
+               C 772 676, 764 668, 756 656
+               C 740 632, 718 608, 700 592 Z"/>
+      <path d="M 666 494 C 704 490, 744 496, 774 510
+               C 788 517, 790 530, 778 536
+               C 760 544, 724 538, 694 528 Z"/>
+    </g>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#000"/>
+
+  <!-- Adam's arm, from the left -->
+  <g filter="url(#edge)">
+    <use href="#arm" fill="url(#flesh)"/>
+    <use href="#arm" fill="url(#sheen)"/>
+  </g>
+
+  <!-- the other arm: mirrored about x=1005 and lifted slightly -->
+  <g filter="url(#edge)" transform="translate(2010,-44) scale(-1,1)">
+    <use href="#arm" fill="url(#flesh)"/>
+    <use href="#arm" fill="url(#sheen)"/>
+  </g>
+
+  <!-- warm light in the gap between the fingertips -->
+  <ellipse cx="1005" cy="556" rx="300" ry="210" fill="url(#gap)"/>
+
+  <rect width="1920" height="1080" fill="url(#vig)"/>
+</svg>
