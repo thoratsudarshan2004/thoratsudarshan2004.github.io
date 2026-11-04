@@ -710,6 +710,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .mock__shot {
   display: block;
   width: 100%;
+  /* height:auto is needed, otherwise the img's height attribute wins over
+     aspect-ratio and the shot comes out too tall */
+  height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: top center;
