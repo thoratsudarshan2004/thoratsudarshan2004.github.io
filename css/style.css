@@ -697,6 +697,24 @@ ul { margin: 0; padding: 0; list-style: none; }
   transform: rotate(-90deg);
 }
 .chip__ext { font-size: 11px; }
+/* a label, not a link — real client work */
+.chip--client {
+  color: var(--orange);
+  background: rgba(252, 107, 47, 0.12);
+  border: 1px solid rgba(252, 107, 47, 0.35);
+  cursor: default;
+}
+.chip--client:hover { transform: none; box-shadow: none; }
+
+/* a real screenshot inside the browser frame, instead of CSS art */
+.mock__shot {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
+}
+
 .chip--icon {
   padding: 0; width: 34px; height: 34px; justify-content: center;
   background: var(--smoke);
